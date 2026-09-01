@@ -86,6 +86,7 @@ function closeService() {
 const trackingAPI =
     "https://script.google.com/macros/s/AKfycbzyCMw40nIXExI9mUeo1pmtKlIa6Q22ihJGsOnP-d36D6vPetYLKQMixLsD6CEzoVrIgw/exec";
 
+
 function openTracking() {
 
     const popup = document.getElementById("trackingPopup");
@@ -118,7 +119,7 @@ async function trackShipment() {
     const resultBox = document.getElementById("trackingResult");
     const button = document.getElementById("trackButton");
 
-    if (!input || !resultBox) {
+    if (!input || !resultBox || !button) {
         return;
     }
 
@@ -149,6 +150,56 @@ async function trackShipment() {
             const bookedDate = formatDate(data.bookedDate);
             const expectedDate = formatDate(data.expectedDate);
 
+            let historyHTML = "";
+
+            if (data.history && data.history.length > 0) {
+
+                historyHTML = `
+                    <div class="tracking-history">
+
+                        <h3>Shipment Journey</h3>
+
+                        <div class="tracking-timeline">
+                `;
+
+                data.history.forEach(function(item) {
+
+                    historyHTML += `
+                        <div class="timeline-item">
+
+                            <div class="timeline-marker">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-line"></span>
+                            </div>
+
+                            <div class="timeline-content">
+
+                                <h4 data-status="${String(item.status || "").toLowerCase()}">
+   <h4 data-status="${String(item.status || "").trim().toLowerCase()}">
+    ${item.status || "Shipment Update"}
+</h4>
+</h4>
+                                <p class="timeline-location">
+                                    📍 ${item.location || "Location unavailable"}
+                                </p>
+
+                                <p class="timeline-date">
+    ${formatHistoryDate(item.date)}
+    ${item.time ? " • " + formatHistoryTime(item.time) : ""}
+</p>
+
+                            </div>
+
+                        </div>
+                    `;
+                });
+
+                historyHTML += `
+                        </div>
+                    </div>
+                `;
+            }
+
             resultBox.innerHTML = `
                 <div class="tracking-success">
 
@@ -172,12 +223,21 @@ async function trackShipment() {
                     <p>
                         <strong>To:</strong>
                         ${data.to}
-                    <p> 
-                    <strong>Mode:</strong> 
-                    ${data.mode} 
                     </p>
+
+                    <p>
+                        <strong>Mode:</strong>
+                        ${data.mode || "—"}
+                    </p>
+
+                    <p>
                         <strong>Status:</strong>
-                        ${data.status}
+                        ${data.status || "—"}
+                    </p>
+
+                    <p>
+                        <strong>Current Location:</strong>
+                        ${data.currentLocation || "—"}
                     </p>
 
                     <p>
@@ -190,6 +250,8 @@ async function trackShipment() {
                         ${expectedDate}
                     </p>
 
+                    ${historyHTML}
+
                 </div>
             `;
 
@@ -198,7 +260,7 @@ async function trackShipment() {
             resultBox.innerHTML = `
                 <div class="tracking-error">
                     <h3>Shipment Not Found</h3>
-                    <p>${data.message}</p>
+                    <p>${data.message || "Tracking number not found."}</p>
                     <p>Please check your tracking number and try again.</p>
                 </div>
             `;
@@ -206,7 +268,7 @@ async function trackShipment() {
 
     } catch (error) {
 
-        console.error(error);
+        console.error("Tracking Error:", error);
 
         resultBox.innerHTML = `
             <div class="tracking-error">
@@ -219,7 +281,6 @@ async function trackShipment() {
     button.disabled = false;
     button.textContent = "Track Shipment";
 }
-
 
 function formatDate(dateValue) {
 
@@ -237,6 +298,44 @@ function formatDate(dateValue) {
         day: "2-digit",
         month: "short",
         year: "numeric"
+    });
+}
+function formatHistoryDate(dateValue) {
+
+    if (!dateValue) {
+        return "";
+    }
+
+    const date = new Date(dateValue);
+
+    if (isNaN(date.getTime())) {
+        return dateValue;
+    }
+
+    return date.toLocaleDateString("en-IN", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric"
+    });
+}
+
+
+function formatHistoryTime(timeValue) {
+
+    if (!timeValue) {
+        return "";
+    }
+
+    const date = new Date(timeValue);
+
+    if (isNaN(date.getTime())) {
+        return timeValue;
+    }
+
+    return date.toLocaleTimeString("en-IN", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true
     });
 }
 
