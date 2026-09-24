@@ -5,569 +5,1334 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fastest Cargo | Courier & Logistics</title>
+    <meta name="description"
+        content="Fastest Cargo - Reliable courier, cargo and logistics solutions for domestic and international shipments.">
+
+    <title>Fastest Cargo | Courier, Cargo & Logistics</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <header class="navbar">
+    <!-- =====================================================
+                         NAVIGATION
+    ====================================================== -->
 
-        <div class="logo">
-    <img src="fastest-cargo.jpeg" alt="Fastest Cargo">
-</div>
-        <nav>
+    <header class="navbar" id="navbar">
+
+        <a href="#home" class="nav-brand">
+            <img src="fastest-cargo.jpeg" alt="Fastest Cargo">
+        </a>
+
+        <nav class="nav-links" id="navLinks">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="#tracking">Track Shipment</a>
+            <a href="#international">International</a>
+            <a href="pod.html">Download POD</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contact</a>
         </nav>
 
-        <a href="#tracking" class="nav-btn">
-            Track Shipment
-        </a>
+        <div class="nav-actions">
+
+            <a href="#tracking" class="nav-track-btn">
+    <span>⌖</span>
+    Track Shipment
+</a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
 
     </header>
 
 
-    <!-- HERO -->
-    <section class="hero" id="home">
+    <!-- =====================================================
+                            HERO
+    ====================================================== -->
 
-        <div class="hero-content">
+    <main>
 
-            <p class="small-title">
-                FAST • SAFE • RELIABLE
-            </p>
+        <section class="hero" id="home">
 
-            <h1>
-    Moving Your World,<br>
-    <span>Faster.</span>
-</h1>
+            <div class="hero-overlay"></div>
 
-            <p>
-                Reliable courier and cargo solutions for
-                domestic and international shipments.
-            </p>
+            <div class="hero-container">
 
-            <div class="hero-buttons">
+                <div class="hero-content reveal">
 
-                <a href="#tracking" class="primary-btn">
-                    Track Shipment
-                </a>
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-dot"></span>
+                        FAST • SAFE • RELIABLE
+                    </div>
 
-                <a
-    href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20would%20like%20to%20make%20a%20shipping%20enquiry."
-    class="secondary-btn"
-    target="_blank"
->
-    WhatsApp Us
+                    <h1>
+                        Logistics That<br>
+                        <span>Move With You.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Reliable courier, cargo and logistics solutions for
+                        documents, parcels and commercial shipments across
+                        domestic and international destinations.
+                    </p>
+
+                    <div class="hero-buttons">
+                     <a href="#tracking" class="btn btn-orange">
+    <span>⌖</span>
+    Track Shipment
 </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- FASTEST CARGO TRUCK IMAGE -->
-
-
-    </section>
-
-
-    <!-- EXPERIENCE -->
-
-    <section class="experience">
-
-        <div class="experience-box">
-
-            <h2>20+</h2>
-
-            <p>
-                Years of Industry Experience
-            </p>
-
-        </div>
-
-
-        <div class="experience-box">
-
-            <h2>Domestic</h2>
-
-            <p>
-                & International Shipping
-            </p>
-
-        </div>
-
-
-        <div class="experience-box">
-
-            <h2>Express</h2>
-
-            <p>
-                Delivery Solutions
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- SERVICES -->
-
-<section class="services" id="services">
-
-    <div class="section-heading">
-
-        <p>WHAT WE DO</p>
-
-        <h2>Our Services</h2>
-
-        <span>
-            Complete courier, cargo and logistics solutions
-            for businesses and individuals.
-        </span>
-
-    </div>
-
-
-    <div class="service-grid">
-
-
-        <!-- AIR CARGO -->
-
-        <div class="service-card" onclick="openService('air')">
-
-    <div class="service-image">
-        <img
-            src="cargo-plane.jpg"
-            alt="Air Cargo"
-        >
-    </div>
-
-    <h3>Air Cargo</h3>
-
-    <p>
-        Fast transportation for urgent and
-        time-sensitive shipments.
-    </p>
-
-    <span class="service-link">
-        Explore Service →
-    </span>
-
-</div>
-
-
-        <!-- SURFACE -->
-
-        <div class="service-card" onclick="openService('surface')">
-
-            <div class="service-image">
-    <img src="cargo-truck.jpg" alt="Surface Transport">
-</div>
-
-            <h3>Surface Transport</h3>
-
-            <p>
-                Reliable road transportation for parcels,
-                documents and cargo.
-            </p>
-
-            <span class="service-link">
-                Explore Service →
-            </span>
-
-        </div>
-
-
-        <!-- RAIL -->
-
-        <div class="service-card" onclick="openService('rail')">
-
-            <div class="service-image">
-    <img src="cargo-train.jpg" alt="Rail Transport">
-</div>
-
-            <h3>Rail Transport</h3>
-
-            <p>
-                Efficient rail transportation for
-                long-distance shipments.
-            </p>
-
-            <span class="service-link">
-                Explore Service →
-            </span>
-
-        </div>
-
-
-        <!-- EXPRESS -->
-
-        <div class="service-card" onclick="openService('express')">
-
-           <div class="service-image">
-    <img src="cargo-express.jpg" alt="Express Delivery">
-</div>
-
-            <h3>Express Delivery</h3>
-
-            <p>
-                Urgent delivery solutions when
-                speed matters the most.
-            </p>
-
-            <span class="service-link">
-                Explore Service →
-            </span>
-
-        </div>
-
-
-        <!-- DOCUMENT -->
-
-        <div class="service-card" onclick="openService('document')">
-
-           <div class="service-image">
-    <img src="cargo-document.jpg" alt="Document Delivery">
-</div>
-
-            <h3>Document Delivery</h3>
-
-            <p>
-                Secure transportation of important
-                business and personal documents.
-            </p>
-
-            <span class="service-link">
-                Explore Service →
-            </span>
-
-        </div>
-
-
-        <!-- PARCEL -->
-
-        <div class="service-card" onclick="openService('parcel')">
-
-            <div class="service-image">
-    <img src="cargo-parcel.jpg" alt="Parcel Delivery">
-</div>
-            <h3>Parcel Delivery</h3>
-
-            <p>
-                Safe and convenient delivery solutions
-                for parcels and shipments.
-            </p>
-
-            <span class="service-link">
-                Explore Service →
-            </span>
-
-        </div>
-
-
-        <!-- E-COMMERCE -->
-
-        <div class="service-card" onclick="openService('ecommerce')">
-
-            <div class="service-image">
-    <img src="cargo-warehouse.jpg" alt="E-Commerce Logistics">
-</div>
-
-            <h3>E-Commerce Logistics</h3>
-
-            <p>
-                Logistics support for e-commerce
-                businesses and online sellers.
-            </p>
-
-            <span class="service-link">
-                Explore Service →
-            </span>
-
-        </div>
-
-
-        <!-- INTERNATIONAL -->
-
-        <div class="service-card" onclick="openService('international')">
-
-            <div class="service-image">
-    <img src="cargo-ship.jpg" alt="International Shipping">
-</div>
-            <h3>International Shipping</h3>
-
-            <p>
-                Courier and cargo solutions for
-                international destinations.
-            </p>
-
-            <span class="service-link">
-                Explore Service →
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-    <!-- TRACKING -->
-
-    <section class="tracking" id="tracking">
-
-        <div class="tracking-content">
-
-            <p class="small-title">
-                SHIPMENT TRACKING
-            </p>
-
-            <h2>
-                Track Your Shipment
-            </h2>
-
-            <p>
-                Select the courier partner through which
-                your shipment has been sent.
-            </p>
-
-
-            <div class="tracking-options">
+                         <a
+                            href="pod.html"
+                            class="btn btn-glass"
+                        >
+                            <span>⇩</span>
+                            Download POD
+                        </a>
+
+                    </div>
+
+                    <div class="hero-trust">
+
+                        <div class="hero-trust-item">
+                            <span class="trust-check">✓</span>
+                            <span>20+ Years Experience</span>
+                        </div>
+
+                        <div class="hero-trust-item">
+                            <span class="trust-check">✓</span>
+                            <span>Multiple Transport Modes</span>
+                        </div>
+
+                        <div class="hero-trust-item">
+                            <span class="trust-check">✓</span>
+                            <span>Business Logistics</span>
+                        </div>
+
+                    </div>
+
+                </div>
 
 
                 
+            </div>
 
-    <!-- FASTEST CARGO -->
+            <div class="hero-scroll">
+                <span>SCROLL TO EXPLORE</span>
+                <div class="scroll-line"></div>
+            </div>
 
-<div class="tracking-card" onclick="openTracking()" style="cursor: pointer;">
-
-    <img
-        src="fastest.tracking.jpeg"
-        alt="Fastest Cargo"
-        class="tracking-logo"
-    >
-
-    <h3>Fastest Cargo</h3>
-
-    <span>
-        Track with Fastest Cargo
-    </span>
-
-</div>
+        </section>
 
 
-<!-- DELHIVERY -->
+        <!-- =====================================================
+                         FLOATING STATS
+        ====================================================== -->
 
-<a
-    href="https://www.delhivery.com/tracking"
-    class="tracking-card"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    <img src="delhivery-logo.png" alt="Delhivery" class="tracking-logo">
+        <section class="stats-section">
 
-    <h3>Delhivery</h3>
+            <div class="stats-container">
 
-    <span>
-        Track Shipment →
-    </span>
-</a>
+                <div class="stat-card reveal">
+                    <div class="stat-icon">🏆</div>
 
+                    <div>
+                        <strong>20+</strong>
+                        <span>Years of Experience</span>
+                    </div>
+                </div>
 
-<!-- DTDC -->
+                <div class="stat-divider"></div>
 
-<a
-    href="https://www.dtdc.com/track-your-shipment/"
-    class="tracking-card"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    <img src="dtdc-logo.jpeg" alt="DTDC" class="tracking-logo">
+                <div class="stat-card reveal">
+                    <div class="stat-icon">🚚</div>
 
-    <h3>DTDC</h3>
+                    <div>
+                        <strong>3</strong>
+                        <span>Transport Modes</span>
+                    </div>
+                </div>
 
-    <span>
-        Track Shipment →
-    </span>
-</a>
+                <div class="stat-divider"></div>
 
+                <div class="stat-card reveal">
+                    <div class="stat-icon">🌍</div>
 
-<!-- DHL -->
+                    <div>
+                        <strong>Domestic</strong>
+                        <span>& International</span>
+                    </div>
+                </div>
 
-<a
-    href="https://www.dhl.com/in-en/home/tracking.html"
-    class="tracking-card"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    <img src="dhl-logo.png" alt="DHL" class="tracking-logo">
+                <div class="stat-divider"></div>
 
-    <h3>DHL</h3>
+                <div class="stat-card reveal">
+                    <div class="stat-icon">⚡</div>
 
-    <span>
-        Track Shipment →
-    </span>
-</a>
-    </section>
+                    <div>
+                        <strong>Express</strong>
+                        <span>Delivery Solutions</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
 
 
-   <!-- WHY CHOOSE US -->
+        <!-- =====================================================
+                        QUICK ACTIONS
+        ====================================================== -->
 
-<section class="why-us">
+        <section class="shipment-tools-premium" id="shipment-tools">
 
-    <div class="section-heading">
+    <div class="shipment-tools-bg"></div>
+    <div class="shipment-tools-overlay"></div>
 
-        <p>
-            WHY FASTEST CARGO
-        </p>
+    <div class="section-container shipment-tools-container">
 
-        <h2>
-            Built Around Your Delivery
-        </h2>
-        <div class="why-heading-line">
-    <span></span>
-    <div>📦</div>
-    <span></span>
-</div>
+        <!-- TOP HEADING -->
+        <div class="shipment-tools-header">
 
-    </div>
+            <div class="shipment-tools-title">
+                <p class="shipment-tools-label">SHIPMENT TOOLS</p>
 
-    <div class="why-grid">
+                <h2>
+                    Everything You Need.<br>
+                    <span>Right Here.</span>
+                </h2>
+            </div>
 
-        <div>
+            <div class="shipment-tools-intro">
+                <span class="tools-mini-label">FASTEST CARGO TOOLS</span>
 
-           <div class="why-card-top">
-    <h3>01</h3>
-    <div class="why-card-icon">🏅</div>
-</div>
-            <h4>
-                20+ Years Experience
-            </h4>
+                <p>
+                    Track shipments, access delivery documents
+                    and get assistance without unnecessary steps.
+                </p>
 
-            <p>
-                Decades of logistics and courier
-                industry experience.
-            </p>
+                <div class="tools-status">
+                    <span></span>
+                    3 TOOLS &nbsp;•&nbsp; ONE PLACE
+                </div>
+            </div>
 
         </div>
 
-        <div>
 
-           <div class="why-card-top">
-    <h3>02</h3>
-    <div class="why-card-icon">✈️</div>
+        <!-- =========================
+             TOOL CARDS
+        ========================== -->
+
+        <div class="shipment-tools-grid">
+
+            <!-- 01 TRACKING -->
+            <div class="shipment-tool-card tool-tracking">
+
+                <span class="tool-number">01</span>
+
+                <div class="tool-icon tracking-icon">
+                    ✦
+                </div>
+
+                <div class="tool-card-content">
+
+                    <span class="tool-category">
+                        LIVE TRACKING
+                    </span>
+
+                    <h3>
+                        Track Your<br>Shipment
+                    </h3>
+
+                    <p>
+                        Enter your Fastest Cargo tracking number
+                        and view the latest shipment status and
+                        journey updates.
+                    </p>
+
+                </div>
+
+                <a href="#tracking" class="tool-action-btn">
+                    <span>Track Shipment</span>
+                    <strong>→</strong>
+                </a>
+
+                <div class="tool-bottom-status">
+                    <i></i>
+                    LIVE SHIPMENT STATUS
+                </div>
+
+            </div>
+
+
+            <!-- 02 POD -->
+            <div class="shipment-tool-card tool-pod">
+
+                <span class="tool-number">02</span>
+
+                <div class="tool-visual tool-pod-visual">
+    <img src="pod.png" alt="Proof of Delivery">
 </div>
-            <h4>
-                Multiple Transport Modes
-            </h4>
 
-            <p>
-                Air, surface and rail transportation
-                options for different requirements.
-            </p>
+                <div class="tool-card-content">
 
-        </div>
+                    <span class="tool-category">
+                        DELIVERY DOCUMENT
+                    </span>
 
-        <div>
+                    <h3>
+                        Download<br>POD
+                    </h3>
 
-            <div class="why-card-top">
-    <h3>03</h3>
-    <div class="why-card-icon">🌍</div>
+                    <p>
+                        Access Proof of Delivery for eligible
+                        delivered shipments through our
+                        dedicated POD portal.
+                    </p>
+
+                </div>
+
+                <a href="pod.html" class="tool-action-btn">
+                    <span>Open POD Portal</span>
+                    <strong>→</strong>
+                </a>
+
+                <div class="tool-bottom-status">
+                    <i></i>
+                    PROOF OF DELIVERY
+                </div>
+
+            </div>
+
+
+            <!-- 03 WHATSAPP -->
+            <div class="shipment-tool-card tool-enquiry">
+
+                <span class="tool-number">03</span>
+
+                <div class="tool-visual tool-whatsapp-visual">
+    <img src="whatsapp.png" alt="Fastest Cargo WhatsApp Support">
 </div>
-            <h4>
-                Domestic & International
-            </h4>
 
-            <p>
-                Courier and cargo solutions for
-                domestic and international destinations.
-            </p>
+                <div class="tool-card-content">
 
-        </div>
+                    <span class="tool-category">
+                        QUICK ASSISTANCE
+                    </span>
 
-        <div>
+                    <h3>
+                        Shipping<br>Enquiry
+                    </h3>
 
-           <div class="why-card-top">
-    <h3>04</h3>
-    <div class="why-card-icon">🛒</div>
-</div>
-            <h4>
-                E-Commerce Solutions
-            </h4>
+                    <p>
+                        Need help with a shipment? Connect
+                        directly with the Fastest Cargo team
+                        through WhatsApp.
+                    </p>
 
-            <p>
-                Reliable logistics support for
-                e-commerce businesses.
-            </p>
+                </div>
+
+                <a
+                    href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20would%20like%20to%20make%20a%20shipping%20enquiry."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="tool-action-btn"
+                >
+                    <span>WhatsApp Us</span>
+                    <strong>→</strong>
+                </a>
+
+                <div class="tool-bottom-status">
+                    <i></i>
+                    QUICK SUPPORT
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
 </section>
-        <!-- ABOUT -->
 
-<section class="about" id="about">
+        <!-- =====================================================
+                           SERVICES
+        ====================================================== -->
 
-    <div class="about-wrapper">
+        <section class="services" id="services">
 
-        <div class="about-content">
+            <div class="section-container">
 
-            <p class="small-title">
-                ABOUT FASTEST CARGO
+                <div class="section-heading reveal">
+
+                    <div>
+                        <p class="section-label">
+                            WHAT WE DO
+                        </p>
+
+                        <h2>
+                            Logistics Solutions<br>
+                            <span>Built for Every Move.</span>
+                        </h2>
+                    </div>
+
+                    <p class="section-heading-text">
+                        From urgent documents to commercial cargo,
+                        Fastest Cargo provides flexible transportation
+                        solutions based on your shipment requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <!-- AIR -->
+
+                    <article
+                        class="service-card service-large reveal"
+                        onclick="openService('air')"
+                    >
+
+                        <div class="service-image">
+                            <img
+                                src="cargo-plane.jpg"
+                                alt="Air Cargo"
+                            >
+                        </div>
+
+                        <div class="service-overlay"></div>
+
+                        <div class="service-number">
+                            01
+                        </div>
+
+                        <div class="service-content">
+
+                            <span>FAST TRANSPORTATION</span>
+
+                            <h3>
+                                Air Cargo
+                            </h3>
+
+                            <p>
+                                Faster movement for urgent and
+                                time-sensitive shipments.
+                            </p>
+
+                            <button>
+                                Explore Service
+                                <span>↗</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SURFACE -->
+
+                    <article
+                        class="service-card reveal"
+                        onclick="openService('surface')"
+                    >
+
+                        <div class="service-image">
+                            <img
+                                src="cargo-truck.jpg"
+                                alt="Surface Transport"
+                            >
+                        </div>
+
+                        <div class="service-overlay"></div>
+
+                        <div class="service-number">
+                            02
+                        </div>
+
+                        <div class="service-content">
+
+                            <span>ROAD NETWORK</span>
+
+                            <h3>
+                                Surface Transport
+                            </h3>
+
+                            <p>
+                                Dependable road transportation for
+                                parcels and commercial cargo.
+                            </p>
+
+                            <button>
+                                Explore Service
+                                <span>↗</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- RAIL -->
+
+                    <article
+                        class="service-card reveal"
+                        onclick="openService('rail')"
+                    >
+
+                        <div class="service-image">
+                            <img
+                                src="cargo-train.jpg"
+                                alt="Rail Transport"
+                            >
+                        </div>
+
+                        <div class="service-overlay"></div>
+
+                        <div class="service-number">
+                            03
+                        </div>
+
+                        <div class="service-content">
+
+                            <span>LONG DISTANCE</span>
+
+                            <h3>
+                                Rail Transport
+                            </h3>
+
+                            <p>
+                                Efficient transportation for
+                                long-distance shipment requirements.
+                            </p>
+
+                            <button>
+                                Explore Service
+                                <span>↗</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- EXPRESS -->
+
+                    <article
+                        class="service-card reveal"
+                        onclick="openService('express')"
+                    >
+
+                        <div class="service-image">
+                            <img
+                                src="cargo-express.jpg"
+                                alt="Express Delivery"
+                            >
+                        </div>
+
+                        <div class="service-overlay"></div>
+
+                        <div class="service-number">
+                            04
+                        </div>
+
+                        <div class="service-content">
+
+                            <span>TIME SENSITIVE</span>
+
+                            <h3>
+                                Express Delivery
+                            </h3>
+
+                            <p>
+                                Urgent shipment solutions when
+                                delivery speed matters.
+                            </p>
+
+                            <button>
+                                Explore Service
+                                <span>↗</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- DOCUMENT -->
+
+                    <article
+                        class="service-card reveal"
+                        onclick="openService('document')"
+                    >
+
+                        <div class="service-image">
+                            <img
+                                src="cargo-document.jpg"
+                                alt="Document Delivery"
+                            >
+                        </div>
+
+                        <div class="service-overlay"></div>
+
+                        <div class="service-number">
+                            05
+                        </div>
+
+                        <div class="service-content">
+
+                            <span>SECURE MOVEMENT</span>
+
+                            <h3>
+                                Document Delivery
+                            </h3>
+
+                            <p>
+                                Reliable transportation for important
+                                personal and business documents.
+                            </p>
+
+                            <button>
+                                Explore Service
+                                <span>↗</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PARCEL -->
+
+                    <article
+                        class="service-card reveal"
+                        onclick="openService('parcel')"
+                    >
+
+                        <div class="service-image">
+                            <img
+                                src="cargo-parcel.jpg"
+                                alt="Parcel Delivery"
+                            >
+                        </div>
+
+                        <div class="service-overlay"></div>
+
+                        <div class="service-number">
+                            06
+                        </div>
+
+                        <div class="service-content">
+
+                            <span>EVERYDAY SHIPPING</span>
+
+                            <h3>
+                                Parcel Delivery
+                            </h3>
+
+                            <p>
+                                Convenient shipping solutions for
+                                personal and commercial parcels.
+                            </p>
+
+                            <button>
+                                Explore Service
+                                <span>↗</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ECOMMERCE -->
+
+                    <article
+                        class="service-card service-wide reveal"
+                        onclick="openService('ecommerce')"
+                    >
+
+                        <div class="service-image">
+                            <img
+                                src="cargo-warehouse.jpg"
+                                alt="E-Commerce Logistics"
+                            >
+                        </div>
+
+                        <div class="service-overlay"></div>
+
+                        <div class="service-number">
+                            07
+                        </div>
+
+                        <div class="service-content">
+
+                            <span>BUSINESS LOGISTICS</span>
+
+                            <h3>
+                                E-Commerce Logistics
+                            </h3>
+
+                            <p>
+                                Flexible logistics support for
+                                online sellers, retailers and businesses.
+                            </p>
+
+                            <button>
+                                Explore Service
+                                <span>↗</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- INTERNATIONAL -->
+
+                    <article
+                        class="service-card service-wide reveal"
+                        onclick="openService('international')"
+                    >
+
+                        <div class="service-image">
+                            <img
+                                src="cargo-ship.jpg"
+                                alt="International Shipping"
+                            >
+                        </div>
+
+                        <div class="service-overlay"></div>
+
+                        <div class="service-number">
+                            08
+                        </div>
+
+                        <div class="service-content">
+
+                            <span>GLOBAL SHIPPING</span>
+
+                            <h3>
+                                International Shipping
+                            </h3>
+
+                            <p>
+                                Courier and cargo solutions for
+                                shipments moving across global destinations.
+                            </p>
+
+                            <button>
+                                Explore Service
+                                <span>↗</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+                     HOW YOUR SHIPMENT MOVES
+        ====================================================== -->
+
+        <!-- =====================================================
+     HOW IT MOVES - VISUAL JOURNEY
+====================================================== -->
+
+<section class="journey-image-section">
+
+    <div class="journey-image-wrap reveal">
+
+        <img
+            src="fastest-image.png"
+            alt="Fastest Cargo shipment journey from pickup to delivery"
+            class="journey-main-image"
+        >
+
+    </div>
+
+</section>
+
+          <!-- =====================================================
+     INTERNATIONAL LOGISTICS
+====================================================== -->
+
+<section class="international-section" id="international">
+
+    <div class="international-bg"></div>
+    <div class="international-overlay"></div>
+
+    <div class="international-container">
+
+        <!-- TOP CONTENT -->
+
+        <div class="international-header reveal">
+
+            <p class="international-label">
+                INTERNATIONAL LOGISTICS
             </p>
 
             <h2>
-                Experience You Can Trust.
+                Shipping Beyond<br>
+                <span>Borders.</span>
+            </h2>
+
+            <p class="international-intro">
+                Reliable international courier and cargo solutions
+                connecting businesses and shipments across global destinations.
+            </p>
+
+            <div class="international-highlights">
+
+                <div>
+                    <span>◇</span>
+                    Safe
+                </div>
+
+                <div>
+                    <span>ϟ</span>
+                    Fast
+                </div>
+
+                <div>
+                    <span>⬡</span>
+                    Reliable
+                </div>
+
+                <div>
+                    <span>◎</span>
+                    Global Reach
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICE CARDS -->
+
+        <div class="international-services reveal">
+
+            <a
+                href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20have%20an%20International%20Documents%20shipping%20enquiry."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="international-service-card"
+            >
+
+                <span class="international-service-icon">▤</span>
+
+                <h3>
+                    International<br>Documents
+                </h3>
+
+                <p>
+                    Secure movement of important documents
+                    to international destinations.
+                </p>
+
+                <strong>
+                    Enquire Now <span>→</span>
+                </strong>
+
+            </a>
+
+
+            <a
+                href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20have%20an%20International%20Parcel%20shipping%20enquiry."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="international-service-card"
+            >
+
+                <span class="international-service-icon">◇</span>
+
+                <h3>
+                    International<br>Parcels
+                </h3>
+
+                <p>
+                    International parcel solutions for
+                    personal and business requirements.
+                </p>
+
+                <strong>
+                    Enquire Now <span>→</span>
+                </strong>
+
+            </a>
+
+
+            <a
+                href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20have%20an%20International%20Commercial%20Cargo%20enquiry."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="international-service-card"
+            >
+
+                <span class="international-service-icon">▥</span>
+
+                <h3>
+                    Commercial<br>Cargo
+                </h3>
+
+                <p>
+                    Logistics solutions for commercial
+                    and business cargo requirements.
+                </p>
+
+                <strong>
+                    Enquire Now <span>→</span>
+                </strong>
+
+            </a>
+
+
+            <a
+                href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20have%20an%20International%20Air%20Freight%20enquiry."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="international-service-card"
+            >
+
+                <span class="international-service-icon">✈</span>
+
+                <h3>
+                    Air<br>Freight
+                </h3>
+
+                <p>
+                    Air freight solutions for time-sensitive
+                    international cargo requirements.
+                </p>
+
+                <strong>
+                    Enquire Now <span>→</span>
+                </strong>
+
+            </a>
+
+        </div>
+
+
+        <!-- NETWORK STRIP -->
+
+        <div class="international-network reveal">
+
+            <div class="international-network-title">
+
+                <span>GLOBAL SHIPPING NETWORK</span>
+
+                <strong>
+                    Connecting shipments across international destinations.
+                </strong>
+
+            </div>
+
+
+            <div class="international-destinations">
+
+    <span>
+        <img src="uae.png" alt="UAE Flag">
+        UAE
+    </span>
+
+    <span>
+        <img src="usa.png" alt="USA Flag">
+        USA
+    </span>
+
+    <span>
+        <img src="ukk.png" alt="UK Flag">
+        UK
+    </span>
+
+    <span>
+        <img src="singapore.png" alt="Singapore Flag">
+        Singapore
+    </span>
+
+    <span>
+        <img src="china.png" alt="China Flag">
+        China
+    </span>
+
+    <span>
+        <img src="germany.png" alt="Germany Flag">
+        Germany
+    </span>
+
+    <span>
+        <img src="australia.png" alt="Australia Flag">
+        Australia
+    </span>
+
+    <span class="worldwide-destination">
+        ◎ Worldwide
+    </span>
+
+</div>
+
+
+        <!-- CTA -->
+
+        <div class="international-cta reveal">
+
+            <div class="international-cta-copy">
+
+                <span class="international-cta-icon">
+                    ◉
+                </span>
+
+                <div>
+
+                    <h3>
+                        Need to Ship Internationally?
+                    </h3>
+
+                    <p>
+                        From documents to commercial cargo, talk to our team
+                        for the right international logistics solution.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="international-cta-buttons">
+
+                <a
+                    href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20would%20like%20a%20quote%20for%20an%20international%20shipment.%0A%0APickup:%20%0ADestination%20Country:%20%0AShipment%20Type:%20%0AWeight:%20"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="international-quote-btn"
+                >
+                    Get International Quote
+                    <span>→</span>
+                </a>
+
+
+                <a
+                    href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20have%20an%20international%20shipping%20enquiry."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="international-whatsapp-btn"
+                >
+                    WhatsApp Us
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+        <!-- =====================================================
+                           TRACKING
+        ====================================================== -->
+
+        
+         <!-- =====================================================
+     PREMIUM MULTI-CARRIER TRACKING
+====================================================== -->
+
+<section class="tracking carrier-tracking" id="tracking">
+
+    <div class="section-container">
+
+        <!-- HEADING -->
+
+        <div class="carrier-heading reveal">
+
+            <p class="section-label">
+                TRACK YOUR SHIPMENT
+            </p>
+
+            <h2>
+                One Tracking. <span>All Carriers.</span>
             </h2>
 
             <p>
-                Fastest Cargo provides reliable courier and cargo solutions
-                for documents, parcels, commercial shipments and business
-                logistics requirements.
-            </p>
-
-            <p>
-                With more than 20 years of industry experience, we support
-                shipments through Air, Surface and Rail transportation,
-                helping customers choose suitable delivery solutions based
-                on destination, urgency and shipment requirements.
-            </p>
-
-            <p>
-                Our services cover domestic and international shipments,
-                e-commerce logistics, document delivery, parcel movement
-                and regular commercial dispatch requirements.
+                Track your shipment across Fastest Cargo and our
+                partner networks in one place.
             </p>
 
         </div>
 
-        <div class="about-stats">
 
-            <div class="about-stat">
-                <strong>20+</strong>
-                <span>Years Experience</span>
+        <!-- 4 TRACKING BOXES -->
+
+        <div class="carrier-grid">
+
+
+            <!-- FASTEST CARGO -->
+
+            <div class="carrier-card carrier-fastest reveal">
+
+                <div class="carrier-visual fastest-visual">
+
+                    <img
+                        src="fastest-ca.png"
+                        alt="Fastest Cargo"
+                    >
+
+                    <div class="carrier-visual-overlay"></div>
+
+                    
+                </div>
+
+
+                <div class="carrier-card-body">
+
+                    <h3>Track Fastest Cargo</h3>
+
+                    <p>
+                        Enter your Fastest Cargo AWB number
+                    </p>
+
+                    <div class="carrier-input-display">
+                        <span>⌕</span>
+                        <span>Enter AWB number</span>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="carrier-track-button fastest-track-button"
+                        onclick="openTracking()"
+                    >
+                        <span>⌕</span>
+                        Track Shipment
+                    </button>
+
+                    <div class="carrier-card-footer">
+                        <span>◈</span>
+                        Real-time updates
+                        <i></i>
+                        Our own network
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="about-stat">
-                <strong>3</strong>
-                <span>Transport Modes</span>
+
+
+            <!-- DELHIVERY -->
+
+            <div class="carrier-card carrier-delhivery reveal">
+
+                <div class="carrier-visual">
+
+                    <img
+    src="TRACK-DELIVERY.png"
+    alt="Delhivery Logistics"
+>
+                    <div class="carrier-visual-overlay"></div>
+
+                    
+
+                </div>
+
+
+                <div class="carrier-card-body">
+
+                    <h3>Track Delhivery</h3>
+
+                    <p>
+                        Continue to Delhivery official tracking
+                    </p>
+
+                    <div class="carrier-input-display">
+                        <span>⌕</span>
+                        <span>Delhivery tracking portal</span>
+                    </div>
+
+                    <a
+                        href="https://www.delhivery.com/track/package"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="carrier-track-button delhivery-track-button"
+                    >
+                        Track on Delhivery
+                        <span>↗</span>
+                    </a>
+
+                    <div class="carrier-card-footer">
+                        <span>◎</span>
+                        Redirects to official Delhivery tracking
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="about-stat">
-                <strong>🌍</strong>
-                <span>Domestic & International</span>
+
+
+            <!-- DTDC -->
+
+            <div class="carrier-card carrier-dtdc reveal">
+
+                <div class="carrier-visual">
+
+                    <img
+    src="DTDC-TRACK.png"
+    alt="DTDC Logistics"
+>
+
+                    <div class="carrier-visual-overlay"></div>
+
+                    
+
+                </div>
+
+
+                <div class="carrier-card-body">
+
+                    <h3>Track DTDC</h3>
+
+                    <p>
+                        Continue to DTDC official tracking
+                    </p>
+
+                    <div class="carrier-input-display">
+                        <span>⌕</span>
+                        <span>DTDC tracking portal</span>
+                    </div>
+
+                    <a
+                        href="https://www.dtdc.in/trace.asp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="carrier-track-button dtdc-track-button"
+                    >
+                        Track on DTDC
+                        <span>↗</span>
+                    </a>
+
+                    <div class="carrier-card-footer">
+                        <span>◎</span>
+                        Redirects to official DTDC tracking
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="about-stat">
-                <strong>📦</strong>
-                <span>Courier & Cargo Solutions</span>
+
+
+            <!-- DHL -->
+
+            <div class="carrier-card carrier-dhl reveal">
+
+                <div class="carrier-visual">
+
+                    <img
+    src="DHL-TRACK.png"
+    alt="DHL Logistics"
+>
+
+                    <div class="carrier-visual-overlay"></div>
+
+                    
+                </div>
+
+
+                <div class="carrier-card-body">
+
+                    <h3>Track DHL</h3>
+
+                    <p>
+                        Continue to DHL official tracking
+                    </p>
+
+                    <div class="carrier-input-display">
+                        <span>⌕</span>
+                        <span>DHL tracking portal</span>
+                    </div>
+
+                    <a
+                        href="https://www.dhl.com/in-en/home/tracking.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="carrier-track-button dhl-track-button"
+                    >
+                        Track on DHL
+                        <span>↗</span>
+                    </a>
+
+                    <div class="carrier-card-footer">
+                        <span>◎</span>
+                        Redirects to official DHL tracking
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM FEATURES -->
+
+        <div class="carrier-features reveal">
+
+            <div>
+                <span class="carrier-feature-icon">ϟ</span>
+
+                <section>
+                    <strong>Real-Time Tracking</strong>
+                    <small>Get latest shipment updates</small>
+                </section>
+            </div>
+
+
+            <div>
+                <span class="carrier-feature-icon">◇</span>
+
+                <section>
+                    <strong>Multiple Carriers</strong>
+                    <small>Track all partners in one place</small>
+                </section>
+            </div>
+
+
+            <div>
+                <span class="carrier-feature-icon">◎</span>
+
+                <section>
+                    <strong>Domestic & International</strong>
+                    <small>Worldwide shipment tracking</small>
+                </section>
+            </div>
+
+
+            <div>
+                <span class="carrier-feature-icon">◷</span>
+
+                <section>
+                    <strong>Fast & Reliable</strong>
+                    <small>Accurate and up-to-date information</small>
+                </section>
             </div>
 
         </div>
@@ -576,235 +1341,739 @@
 
 </section>
 
-    
-    <!-- CONTACT -->
+        <!-- =====================================================
+                        WHY FASTEST CARGO
+        ====================================================== -->
 
-    <section class="contact" id="contact">
+        <!-- =====================================================
+     WHY FASTEST CARGO - PREMIUM IMAGE
+====================================================== -->
 
-        <div class="section-heading">
+<section class="why-image-section">
 
-            <p>
+    <div class="why-image-wrap reveal">
+
+        <img
+            src="fastest.m.png"
+            alt="Why Fastest Cargo - Built Around Your Delivery"
+            class="why-premium-image"
+        >
+
+    </div>
+
+</section>
+
+
+        <!-- =====================================================
+                            ABOUT
+        ====================================================== -->
+
+        <section class="about" id="about">
+
+            <div class="section-container about-container">
+
+                <div class="about-visual reveal">
+
+                    <div class="about-image">
+                        <img
+                            src="cargo-warehouse.jpg"
+                            alt="Fastest Cargo Logistics"
+                        >
+                    </div>
+
+                    <div class="about-experience-card">
+
+                        <strong>
+                            20+
+                        </strong>
+
+                        <span>
+                            YEARS OF<br>
+                            INDUSTRY EXPERIENCE
+                        </span>
+
+                    </div>
+
+                    <div class="about-small-card">
+                        <span>📦</span>
+
+                        <div>
+                            <strong>
+                                Courier & Cargo
+                            </strong>
+
+                            <small>
+                                Logistics Solutions
+                            </small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="about-content about-content-premium reveal">
+
+    <div class="about-eyebrow">
+        <span></span>
+        ABOUT FASTEST CARGO
+    </div>
+
+    <h2>
+        Experience You<br>
+        <span>Can Trust.</span>
+    </h2>
+
+    <p class="about-lead">
+        Reliable logistics built around your shipment,
+        your timeline and your business.
+    </p>
+
+    <p class="about-description">
+        With more than <strong>20 years of industry experience</strong>,
+        Fastest Cargo provides dependable courier and cargo solutions
+        for documents, parcels and commercial shipments.
+    </p>
+
+    <p class="about-description">
+        From Air, Surface and Rail transportation to domestic,
+        international and e-commerce logistics, we help customers
+        choose the right movement solution for every requirement.
+    </p>
+
+
+    <div class="about-premium-features">
+
+        <div class="about-premium-feature">
+            <span class="about-feature-icon">✈</span>
+
+            <div>
+                <strong>Multi-Mode Logistics</strong>
+                <small>Air • Surface • Rail</small>
+            </div>
+        </div>
+
+
+        <div class="about-premium-feature">
+            <span class="about-feature-icon">⌖</span>
+
+            <div>
+                <strong>Domestic Network</strong>
+                <small>Reliable shipment movement</small>
+            </div>
+        </div>
+
+
+        <div class="about-premium-feature">
+            <span class="about-feature-icon">◎</span>
+
+            <div>
+                <strong>Global Shipping</strong>
+                <small>International logistics solutions</small>
+            </div>
+        </div>
+
+
+        <div class="about-premium-feature">
+            <span class="about-feature-icon">▣</span>
+
+            <div>
+                <strong>Business Logistics</strong>
+                <small>Built for growing businesses</small>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="about-trust-strip">
+
+        <div>
+            <strong>20+</strong>
+            <span>YEARS OF<br>EXPERIENCE</span>
+        </div>
+
+        <i></i>
+
+        <p>
+            Moving documents, parcels and commercial cargo
+            with dependable logistics solutions.
+        </p>
+
+        </div>
+
+</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+                          CTA BANNER
+        ====================================================== -->
+
+        <section class="cta-section">
+
+            <div class="cta-container">
+
+                <div class="cta-content reveal">
+
+                    <p class="section-label light-label">
+                        LET'S MOVE
+                    </p>
+
+                    <h2>
+                        Ready to Move<br>
+                        Your Shipment?
+                    </h2>
+
+                    <p>
+                        Connect with Fastest Cargo for courier,
+                        cargo and logistics requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="cta-actions reveal">
+
+                    <a
+                        href="tel:+919082698013"
+                        class="cta-btn cta-white"
+                    >
+                        <span>☎</span>
+
+                        <div>
+                            <small>CALL US</small>
+                            <strong>9082698013</strong>
+                        </div>
+                    </a>
+
+                    <a
+                        href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20would%20like%20to%20make%20a%20shipping%20enquiry."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="cta-btn cta-whatsapp"
+                    >
+                        <span>◉</span>
+
+                        <div>
+                            <small>QUICK ENQUIRY</small>
+                            <strong>WhatsApp Us</strong>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+                            CONTACT
+        ====================================================== -->
+
+        <section class="contact" id="contact">
+
+    <div class="section-container">
+
+        <div class="contact-heading reveal">
+
+            <p class="section-label">
                 GET IN TOUCH
             </p>
 
             <h2>
-                Contact Fastest Cargo
+                Let's Talk<br>
+                <span>Logistics.</span>
             </h2>
 
-        </div>
-
-
-        <div class="contact-grid">
-
-
-            <!-- ADDRESS -->
-
-            <div class="contact-box">
-             <div class="contact-icon">📍</div>
-                <h3>
-                    Visit Us
-                </h3>
-
-                <p>
-                    Gala No. 4, Opposite Skyline Icon Building,
-                    Chimatpada, Marol, Andheri East,
-                    Mumbai - 400059
-                </p>
-
-            </div>
-
-
-            <!-- PHONE -->
-
-            <div class="contact-box">
-            <div class="contact-icon">📞</div>
-                <h3>
-                    Call Us
-                </h3>
-
-               <a href="tel:+919004858340">9004858340</a>
-<a href="tel:+919082699471">9082699471</a>
-<a href="tel:+919082698013">9082698013</a>
-
-            </div>
-
-
-            <!-- EMAIL -->
-
-            <div class="contact-box">
-            <div class="contact-icon">✉️</div>
-                <h3>
-                    Email Us
-                </h3>
-
-                <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=ftckrishna@gmail.com"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    ftckrishna@gmail.com
-</a>
-<a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=salesftc01@gmail.com"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    salesftc01@gmail.com
-</a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="footer-container">
-
-        <div class="footer-brand">
-
-            <div class="footer-logo">
-                FASTEST CARGO
-            </div>
-
             <p>
-                Reliable courier, cargo and logistics solutions
-                for domestic and international shipments.
+                From a single urgent shipment to regular business logistics,
+                our team is ready to help you find the right solution.
             </p>
 
         </div>
 
-        <div class="footer-links">
 
-            <h3>Quick Links</h3>
+        <div class="premium-contact-grid">
 
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#tracking">Track Shipment</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
+            <!-- FEATURED OFFICE CARD -->
+
+            <div class="premium-office-card reveal">
+
+                <div class="office-card-glow"></div>
+                <div class="office-card-number">01</div>
+
+                <div class="premium-contact-icon">
+                    📍
+                </div>
+
+                <span class="premium-contact-label">
+                    MUMBAI OFFICE
+                </span>
+
+                <h3>
+                    Visit Fastest Cargo
+                </h3>
+
+                <p>
+                    Gala No. 4, Opposite Skyline Icon Building,<br>
+                    Chimatpada, Marol, Andheri East,<br>
+                    Mumbai - 400059
+                </p>
+
+                <a
+                    href="https://maps.app.goo.gl/NEP4CtbJcMNi839f9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="office-direction-btn"
+                >
+                    Get Directions
+                    <span>↗</span>
+                </a>
+
+                <div class="office-card-line"></div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="premium-contact-side">
+
+                <!-- CALL -->
+
+                <div class="premium-contact-card reveal">
+
+                    <div class="premium-card-top">
+
+                        <div class="premium-small-icon">
+                            ☎
+                        </div>
+
+                        <span>02</span>
+
+                    </div>
+
+                    <div class="premium-card-content">
+
+                        <span class="premium-contact-label">
+                            DIRECT ASSISTANCE
+                        </span>
+
+                        <h3>
+                            Call Our Team
+                        </h3>
+
+                        <p>
+                            Speak directly with our team for shipment
+                            enquiries and logistics assistance.
+                        </p>
+
+                        <div class="premium-phone-list">
+
+                            <a href="tel:+919004858340">
+                                <span>9004858340</span>
+                                <strong>→</strong>
+                            </a>
+
+                            <a href="tel:+919082699471">
+                                <span>9082699471</span>
+                                <strong>→</strong>
+                            </a>
+
+                            <a href="tel:+919082698013">
+                                <span>9082698013</span>
+                                <strong>→</strong>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="premium-contact-card reveal">
+
+                    <div class="premium-card-top">
+
+                        <div class="premium-small-icon">
+                            ✉
+                        </div>
+
+                        <span>03</span>
+
+                    </div>
+
+                    <div class="premium-card-content">
+
+                        <span class="premium-contact-label">
+                            EMAIL SUPPORT
+                        </span>
+
+                        <h3>
+                            Write to Us
+                        </h3>
+
+                        <p>
+                            Send your shipment or business logistics
+                            requirements to our team.
+                        </p>
+
+                        <div class="premium-email-list">
+
+                            <a
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=ftckrishna@gmail.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span>ftckrishna@gmail.com</span>
+                                <strong>↗</strong>
+                            </a>
+
+                            <a
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=salesftc01@gmail.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span>salesftc01@gmail.com</span>
+                                <strong>↗</strong>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="footer-contact">
 
-            <h3>Contact Us</h3>
+        <!-- BOTTOM CONTACT STRIP -->
 
-            <a href="tel:+919004858340">📞 9004858340</a>
-            <a href="tel:+919082699471">📞 9082699471</a>
-            <a href="tel:+919082698013">📞 9082698013</a>
+        <div class="contact-bottom-strip reveal">
+
+            <div class="contact-strip-left">
+
+                <div class="contact-strip-icon">
+                    ◉
+                </div>
+
+                <div>
+                    <span>NEED A QUICK RESPONSE?</span>
+                    <strong>Talk to us on WhatsApp</strong>
+                </div>
+
+            </div>
+
+            <p>
+                Send us your pickup location, destination and shipment
+                details for quick assistance.
+            </p>
 
             <a
                 href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20would%20like%20to%20make%20a%20shipping%20enquiry."
                 target="_blank"
+                rel="noopener noreferrer"
             >
-                💬 WhatsApp Us
+                Start Conversation
+                <span>→</span>
             </a>
 
         </div>
 
     </div>
 
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Fastest Cargo. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-   
-
-    <script src="script.js"></script>
+</section>
 
 
-<!-- SERVICE POPUP -->
+    <!-- =====================================================
+                            FOOTER
+    ====================================================== -->
 
-<div class="service-popup" id="servicePopup">
+    <footer class="footer">
 
-    <div class="service-popup-box">
+        <div class="footer-container">
 
-        <button
-            class="service-popup-close"
-            onclick="closeService()"
-        >
-            ×
-        </button>
+            <div class="footer-brand">
 
-        <div class="service-popup-icon">
-            ✨
+                <img
+                    src="fastest-cargo.jpeg"
+                    alt="Fastest Cargo"
+                    class="footer-brand-logo"
+                >
+
+                <p>
+                    Reliable courier, cargo and logistics solutions
+                    for domestic and international shipments.
+                </p>
+
+                <a
+                    href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20would%20like%20to%20make%20a%20shipping%20enquiry."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-whatsapp"
+                >
+                    ◉ WhatsApp Us
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#tracking">Track Shipment</a>
+                <a href="pod.html">Download POD</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Services
+                </h3>
+
+                <a href="#services">Air Cargo</a>
+                <a href="#services">Surface Transport</a>
+                <a href="#services">Rail Transport</a>
+                <a href="#services">Express Delivery</a>
+                <a href="#services">International Shipping</a>
+
+            </div>
+
+
+            <div class="footer-column footer-contact">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <a href="tel:+919004858340">
+                    ☎ 9004858340
+                </a>
+
+                <a href="tel:+919082699471">
+                    ☎ 9082699471
+                </a>
+
+                <a href="tel:+919082698013">
+                    ☎ 9082698013
+                </a>
+
+                <a href="mailto:ftckrishna@gmail.com">
+                    ✉ ftckrishna@gmail.com
+                
+                <span>
+                    📍 Marol, Andheri East,<br>
+                    Mumbai - 400059
+                </span>
+
+            </div>
+
         </div>
 
-        <h2 id="servicePopupTitle">
-            Service
-        </h2>
 
-        <p id="servicePopupText">
-            Service information will appear here.
-        </p>
+        <div class="footer-bottom">
 
-        <button
-            class="popup-contact-btn"
-            onclick="window.open('https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20would%20like%20to%20make%20a%20shipping%20enquiry','_blank')"
-        >
-            Enquire on WhatsApp
-        </button>
+            <p>
+                © 2026 Fastest Cargo. All Rights Reserved.
+            </p>
+
+            <div>
+                <span>
+                    Your Cargo.
+                </span>
+
+                <strong>
+                    Our Commitment.
+                </strong>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+                       SERVICE POPUP
+    ====================================================== -->
+
+    <div
+        class="service-popup"
+        id="servicePopup"
+    >
+
+        <div class="service-popup-box">
+
+            <button
+                class="service-popup-close"
+                onclick="closeService()"
+                aria-label="Close service information"
+            >
+                ×
+            </button>
+
+            <div class="service-popup-image">
+    <img
+        id="servicePopupImage"
+        src="cargo-plane.jpg"
+        alt="Fastest Cargo Service"
+    >
+    <div class="service-popup-image-overlay"></div>
+
+    <span class="service-popup-image-badge" id="servicePopupBadge">
+        FAST TRANSPORTATION
+    </span>
+</div>
+
+            <p class="popup-label">
+                FASTEST CARGO SERVICE
+            </p>
+
+            <h2 id="servicePopupTitle">
+                Service
+            </h2>
+
+            <p id="servicePopupText">
+                Service information will appear here.
+            </p>
+
+            <a
+                href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20would%20like%20to%20make%20a%20shipping%20enquiry."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-contact-btn"
+            >
+                Enquire on WhatsApp
+                <span>→</span>
+            </a>
+
+        </div>
 
     </div>
 
-</div>
+
+    <!-- =====================================================
+                    FASTEST CARGO TRACKING POPUP
+    ====================================================== -->
+
+    <div
+        class="tracking-popup"
+        id="trackingPopup"
+    >
+
+        <div class="tracking-popup-box">
+
+            <button
+                class="tracking-popup-close"
+                onclick="closeTracking()"
+                aria-label="Close tracking"
+            >
+                ×
+            </button>
+
+            <div class="tracking-popup-header">
+
+                <div class="tracking-popup-logo">
+                    <img
+                        src="fastest.tracking.jpeg"
+                        alt="Fastest Cargo"
+                    >
+                </div>
+
+                <div>
+                    <p class="popup-label">
+                        FASTEST CARGO TRACKING
+                    </p>
+
+                    <h2>
+                        Track Your Shipment
+                    </h2>
+                </div>
+
+            </div>
+
+            <p class="tracking-popup-description">
+                Enter your Fastest Cargo tracking number below
+                to view the latest shipment status.
+            </p>
 
 
-<!-- FASTEST CARGO TRACKING POPUP -->
+            <div class="tracking-input-group">
 
-<div class="tracking-popup" id="trackingPopup">
+                <div class="tracking-input-wrap">
 
-    <div class="tracking-popup-box">
+                    <span>
+                        ⌖
+                    </span>
 
-        <button
-            class="tracking-popup-close"
-            onclick="closeTracking()"
-        >
-            ×
-        </button>
+                    <input
+                        type="text"
+                        id="trackingNumber"
+                        placeholder="Enter Tracking Number"
+                        autocomplete="off"
+                    >
 
-        <p class="small-title">
-            FASTEST CARGO
-        </p>
+                </div>
 
-        <h2>
-            Track Your Shipment
-        </h2>
+                <button
+                    id="trackButton"
+                    onclick="trackShipment()"
+                >
+                    Track Shipment
+                    <span>→</span>
+                </button>
 
-        <p>
-            Enter your Fastest Cargo tracking number below.
-        </p>
+            </div>
 
-        <input
-            type="text"
-            id="trackingNumber"
-            placeholder="Enter Tracking Number"
-            autocomplete="off"
-        >
 
-        <button
-            id="trackButton"
-            onclick="trackShipment()"
-        >
-            Track Shipment
-        </button>
+            <div id="trackingResult"></div>
 
-        <div id="trackingResult"></div>
+        </div>
 
     </div>
 
-</div>
 
+    <!-- FLOATING WHATSAPP -->
+
+    <a
+        href="https://wa.me/919082698013?text=Hello%20Fastest%20Cargo,%20I%20would%20like%20to%20make%20a%20shipping%20enquiry."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="floating-whatsapp"
+        aria-label="Contact Fastest Cargo on WhatsApp"
+    >
+        <span>◉</span>
+
+        <div>
+            <small>
+                NEED HELP?
+            </small>
+
+            <strong>
+                WhatsApp Us
+            </strong>
+        </div>
+    </a>
+
+
+    <script src="script.js"></script>
 
 </body>
 
