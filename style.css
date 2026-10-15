@@ -8165,7 +8165,7 @@ strong span {
         transform: translateX(calc(-50% - 11px));
     }
 }
-}
+
 
 
 /* TABLET */
@@ -8258,4 +8258,80 @@ section.partners-section {
 
     padding: 45px 0 50px !important;
     min-height: auto !important;
+}
+/* =====================================
+   OUR PARTNERS - MOBILE SLIDER FIX
+===================================== */
+
+@media (max-width: 768px) {
+
+    .partners-section {
+        width: 100%;
+        padding: 35px 0 40px !important;
+        overflow: hidden !important;
+        background-image: url("./BACK.png") !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    .partners-header {
+        padding: 0 16px;
+        margin-bottom: 20px !important;
+    }
+
+    .partners-header h2 {
+        font-size: 30px !important;
+    }
+
+    .partners-header p {
+        font-size: 13px !important;
+        line-height: 1.6;
+    }
+
+    .partners-slider {
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden !important;
+        margin: 15px 0 0 !important;
+        padding: 10px 0 !important;
+    }
+
+    .partners-track {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center;
+        width: max-content !important;
+        gap: 14px !important;
+
+        animation: partnersScrollMobile 28s linear infinite !important;
+    }
+
+    .partner-card {
+        flex: 0 0 145px !important;
+        width: 145px !important;
+        height: 90px !important;
+        padding: 12px !important;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
+
+    .partner-card img {
+        display: block;
+        width: 100%;
+        max-width: 120px;
+        height: 60px;
+        object-fit: contain;
+    }
+}
+
+/* Mobile seamless infinite sliding */
+
+@keyframes partnersScrollMobile {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 7px));
+    }
 }
