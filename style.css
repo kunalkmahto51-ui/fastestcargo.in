@@ -7669,3 +7669,593 @@ strong span {
     }
 
 }
+/* =========================================
+   OUR PARTNERS - INFINITE LOGO SLIDER
+========================================= */
+
+.corporate-partners {
+    padding: 85px 0 95px;
+    background: #f6f8fb;
+    overflow: hidden;
+}
+
+.corporate-partners-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.corporate-partners-heading h2 {
+    font-size: clamp(34px, 4vw, 50px);
+    font-weight: 900;
+    color: #071426;
+    letter-spacing: -1.5px;
+}
+
+.corporate-partners-heading h2 span {
+    color: #f97316;
+}
+
+/* SLIDER WINDOW */
+
+.partners-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 8%,
+        black 92%,
+        transparent
+    );
+}
+
+/* MOVING TRACK */
+
+.partners-track {
+    --partner-width: 220px;
+    --partner-gap: 24px;
+
+    display: flex;
+    align-items: center;
+    gap: var(--partner-gap);
+
+    width: max-content;
+
+    animation: partnersScroll 32s linear infinite;
+}
+
+/* LOGO CARDS */
+
+.partner-logo {
+    flex: 0 0 var(--partner-width);
+    height: 125px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px;
+
+    background: white;
+    border: 1px solid #e4e7ec;
+    border-radius: 16px;
+
+    transition: box-shadow .3s ease;
+}
+
+.partner-logo img {
+    width: 100%;
+    max-height: 78px;
+    object-fit: contain;
+}
+
+/* HOVER */
+
+.partner-logo:hover {
+    box-shadow: 0 12px 30px rgba(7,20,38,.10);
+}
+
+/* PAUSE ON HOVER */
+
+.partners-slider:hover .partners-track {
+    animation-play-state: paused;
+}
+
+/* INFINITE SCROLL */
+
+@keyframes partnersScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(
+            calc(
+                -8 * (var(--partner-width) + var(--partner-gap))
+            )
+        );
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .corporate-partners {
+        padding: 65px 0 75px;
+    }
+
+    .partners-track {
+        --partner-width: 155px;
+        --partner-gap: 14px;
+
+        animation-duration: 25s;
+    }
+
+    .partner-logo {
+        height: 100px;
+        padding: 15px;
+    }
+
+    .partner-logo img {
+        max-height: 65px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .partners-track {
+        animation: none;
+    }
+
+    .partners-slider {
+        overflow-x: auto;
+    }
+}
+
+/* ==========================================
+   FASTEST CARGO - OUR PARTNERS
+   PREMIUM INFINITE LOGO SLIDER
+========================================== */
+
+.corporate-partners {
+    padding: 90px 0 95px;
+    background: #f6f8fb;
+    overflow: hidden;
+}
+
+/* HEADING */
+
+.corporate-partners-heading {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.corporate-partners-heading h2 {
+    color: #071426;
+    font-size: clamp(34px, 4vw, 50px);
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1.15;
+}
+
+.corporate-partners-heading h2 span {
+    color: #f97316;
+}
+
+.corporate-partners-heading > p:last-child {
+    max-width: 550px;
+    margin: 16px auto 0;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* SLIDER VIEWPORT */
+
+.partners-slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 7%,
+        black 93%,
+        transparent
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 7%,
+        black 93%,
+        transparent
+    );
+}
+
+/* CONTINUOUS MOVING TRACK */
+
+.partners-track {
+    --partner-width: 215px;
+    --partner-gap: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: var(--partner-gap);
+    width: max-content;
+
+    animation: partnersScroll 38s linear infinite;
+    will-change: transform;
+}
+
+/* INDIVIDUAL LOGO BOX */
+
+.partner-logo {
+    flex: 0 0 var(--partner-width);
+    height: 130px;
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    border: 1px solid #e4e7ec;
+    border-radius: 17px;
+
+    transition: box-shadow .3s ease,
+                border-color .3s ease;
+}
+
+.partner-logo img {
+    display: block;
+    width: 100%;
+    max-height: 85px;
+    object-fit: contain;
+}
+
+/* HOVER EFFECT */
+
+.partner-logo:hover {
+    border-color: #f97316;
+    box-shadow: 0 12px 35px rgba(7, 20, 38, .12);
+}
+
+/* PAUSE WHEN MOUSE HOVERS */
+
+.partners-slider:hover .partners-track {
+    animation-play-state: paused;
+}
+
+/* INFINITE LOOP: 11 LOGOS */
+
+@keyframes partnersScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(
+            calc(-11 * (var(--partner-width) + var(--partner-gap)))
+        );
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .corporate-partners {
+        padding: 75px 0 80px;
+    }
+
+    .partners-track {
+        --partner-width: 185px;
+        --partner-gap: 18px;
+
+        animation-duration: 34s;
+    }
+
+    .partner-logo {
+        height: 115px;
+        padding: 18px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .corporate-partners {
+        padding: 65px 0 70px;
+    }
+
+    .corporate-partners-heading {
+        margin-bottom: 32px;
+    }
+
+    .corporate-partners-heading h2 {
+        font-size: 34px;
+    }
+
+    .corporate-partners-heading > p:last-child {
+        font-size: 12px;
+        padding: 0 18px;
+    }
+
+    .partners-track {
+        --partner-width: 150px;
+        --partner-gap: 14px;
+
+        animation-duration: 29s;
+    }
+
+    .partner-logo {
+        height: 100px;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .partner-logo img {
+        max-height: 65px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .partners-track {
+        animation: none;
+    }
+
+    .partners-slider {
+        overflow-x: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+}
+
+/* ==========================================
+   FASTEST CARGO - OUR PARTNERS SECTION
+   LIGHT BLUE PREMIUM DESIGN
+========================================== */
+
+/* MAIN SECTION */
+
+.partners-section {
+    position: relative;
+    width: 100%;
+
+    background-image: url("BACK.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 55px 0 60px;
+    min-height: auto;
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* SECTION HEADING */
+
+.partners-header {
+    text-align: center;
+    max-width: 900px;
+
+    margin: 0 auto 32px;
+    padding: 0 20px;
+}
+
+.partners-header .section-tag,
+.partners-header .eyebrow {
+    color: #ff6b00;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+.partners-header h2 {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 800;
+    color: #07172e;
+    line-height: 1.15;
+
+    margin: 0 0 14px;
+}
+
+.partners-header h2 span {
+    color: #ff6b00;
+}
+
+.partners-header p {
+    font-size: 16px;
+    color: #60738c;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* SLIDING AREA */
+
+.partners-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    margin-top: 25px;
+    padding: 12px 0 18px;
+}
+
+
+/* LOGO TRACK */
+
+.partners-track {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    width: max-content;
+
+    animation: partnersScroll 35s linear infinite;
+    will-change: transform;
+}
+
+
+/* INDIVIDUAL LOGO CARD */
+
+.partner-card {
+    flex: 0 0 210px;
+
+    height: 125px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #dce8f5;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px;
+
+    box-shadow: 0 6px 20px rgba(24, 71, 120, 0.06);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+
+/* COMPANY LOGOS */
+
+.partner-card img {
+    display: block;
+    width: 100%;
+    max-width: 165px;
+    height: 75px;
+
+    object-fit: contain;
+}
+
+
+/* HOVER EFFECT */
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(24, 71, 120, 0.12);
+}
+
+
+/* CONTINUOUS SLIDING
+   Requires duplicated logo set in HTML */
+
+@keyframes partnersScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 11px));
+    }
+}
+}
+
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+    .partners-section {
+        padding: 45px 0 50px;
+    }
+
+    .partner-card {
+        flex-basis: 180px;
+        height: 110px;
+    }
+
+    .partner-card img {
+        max-width: 145px;
+        height: 65px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .partners-section {
+        padding: 38px 0 42px;
+        background-position: center;
+    }
+
+    .partners-header {
+        margin-bottom: 22px;
+        padding: 0 18px;
+    }
+
+    .partners-header h2 {
+        font-size: 32px;
+    }
+
+    .partners-header p {
+        font-size: 14px;
+    }
+
+    .partners-slider {
+        margin-top: 12px;
+        padding: 10px 0;
+    }
+
+    .partners-track {
+        gap: 14px;
+        animation-duration: 28s;
+    }
+
+    .partner-card {
+        flex-basis: 150px;
+        height: 95px;
+        padding: 15px;
+        border-radius: 14px;
+    }
+
+    .partner-card img {
+        max-width: 125px;
+        height: 58px;
+    }
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .partners-track {
+        animation: none;
+    }
+}
+/* OUR PARTNERS BACKGROUND FIX */
+
+.partners-section {
+    background: url("./BACK.png") center center / cover no-repeat !important;
+    padding: 45px 0 50px !important;
+    min-height: auto !important;
+}
+/* FINAL PARTNERS BACKGROUND */
+
+section.partners-section {
+    background-image: url("./BACK.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    padding: 45px 0 50px !important;
+    min-height: auto !important;
+}
