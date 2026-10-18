@@ -8335,3 +8335,339 @@ section.partners-section {
         transform: translateX(calc(-50% - 7px));
     }
 }
+.staff-login-link {
+  color: #1769e0 !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.staff-login-link:hover {
+  color: #ff7518 !important;
+}
+
+/* =====================================
+   FASTEST CARGO - OUR PARTNERS
+===================================== */
+
+.our-partners {
+  padding: 75px 20px;
+  background: #f7faff;
+}
+
+.partners-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.partners-heading {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.partners-tag {
+  display: inline-block;
+  color: #1769e0;
+  background: #e8f1ff;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.partners-heading h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #102b4b;
+  margin-bottom: 12px;
+}
+
+.partners-heading p {
+  color: #697b91;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* LOGO GRID */
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.partner-card {
+  height: 115px;
+  background: #ffffff;
+  border: 1px solid #e5ecf5;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 22px;
+  transition: all 0.3s ease;
+}
+
+.partner-card img {
+  max-width: 100%;
+  max-height: 65px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(16, 43, 75, 0.1);
+  border-color: #b8d5ff;
+}
+
+.partner-card:hover img {
+  transform: scale(1.07);
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .our-partners {
+    padding: 50px 15px;
+  }
+
+  .partners-heading h2 {
+    font-size: 27px;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .partner-card {
+    height: 95px;
+    padding: 15px;
+  }
+
+  .partner-card img {
+    max-height: 55px;
+  }
+}
+
+/* =====================================
+   FASTEST CARGO - ROLLING PARTNERS
+===================================== */
+
+.partners-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.partners-track {
+  display: flex;
+  width: max-content;
+  animation: partnersScroll 35s linear infinite;
+}
+
+.partners-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+.partners-group .partner-card {
+  width: 180px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.partners-group .partner-card img {
+  max-width: 100%;
+  max-height: 65px;
+  object-fit: contain;
+}
+
+/* CONTINUOUS MOVEMENT */
+
+@keyframes partnersScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* PAUSE ON HOVER */
+
+.partners-marquee:hover .partners-track {
+  animation-play-state: paused;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .partners-group {
+    gap: 12px;
+    padding-right: 12px;
+  }
+
+  .partners-group .partner-card {
+    width: 135px;
+    height: 85px;
+    padding: 12px;
+  }
+
+  .partners-group .partner-card img {
+    max-height: 50px;
+  }
+
+  .partners-track {
+    animation-duration: 25s;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .partners-track {
+    animation: none;
+  }
+}
+.partners-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.partners-track {
+  display: flex;
+  width: max-content;
+  animation: partnersScroll 45s linear infinite;
+}
+
+.partners-group {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+  padding-right: 20px;
+}
+
+.partners-group .partner-card {
+  width: 180px;
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.partners-group .partner-card img {
+  max-width: 100%;
+  max-height: 70px;
+  object-fit: contain;
+}
+
+@keyframes partnersScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.partners-marquee:hover .partners-track {
+  animation-play-state: paused;
+}
+
+/* =====================================
+   FASTEST CARGO - INFINITE LOGO ROLL
+===================================== */
+
+.partners-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.partners-track {
+  display: flex;
+  width: max-content;
+  animation: fcPartnersRoll 55s linear infinite;
+}
+
+.partners-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+.partners-group .partner-card {
+  width: 180px;
+  height: 110px;
+  flex: 0 0 180px;
+  background: #fff;
+  border: 1px solid #e5eaf1;
+  border-radius: 12px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners-group .partner-card img {
+  display: block;
+  max-width: 100%;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes fcPartnersRoll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.partners-slider:hover .partners-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 600px) {
+  .partners-group {
+    gap: 12px;
+    padding-right: 12px;
+  }
+
+  .partners-group .partner-card {
+    width: 135px;
+    height: 90px;
+    flex-basis: 135px;
+    padding: 12px;
+  }
+
+  .partners-track {
+    animation-duration: 40s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners-track {
+    animation: none;
+  }
+}

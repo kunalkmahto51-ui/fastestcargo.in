@@ -33,6 +33,9 @@
             <a href="pod.html">Download POD</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contact</a>
+            <a href="staff-login.html" class="staff-login-link">
+  Staff Login
+</a>
         </nav>
 
         <div class="nav-actions">
@@ -1794,128 +1797,76 @@
 </section>
 
 
+
 <!-- =========================================
      OUR PARTNERS - FASTEST CARGO
 ========================================= -->
 
 <section class="partners-section" id="partners">
 
-    <div class="partners-header">
+  <div class="partners-header">
+    <div class="section-tag">OUR BUSINESS NETWORK</div>
 
-        <div class="section-tag">
-            OUR BUSINESS NETWORK
-        </div>
+    <h2>Our <span>Partners.</span></h2>
 
-        <h2>Our <span>Partners.</span></h2>
+    <p>
+      Connecting businesses through reliable
+      courier and logistics solutions.
+    </p>
+  </div>
 
-        <p>
-            Connecting businesses through reliable
-            courier and logistics solutions.
-        </p>
+  <div class="partners-slider">
 
-    </div>
+    <div class="partners-track">
 
-    <div class="partners-slider">
+      <!-- FIRST COMPLETE LOGO GROUP -->
+      <div class="partners-group">
 
-        <div class="partners-track">
+        <!-- EXISTING LOGOS -->
+        <div class="partner-card"><img src="JJ.jpg" alt="Johnson & Johnson"></div>
+        <div class="partner-card"><img src="WHIRPOOL.png" alt="Whirlpool"></div>
+        <div class="partner-card"><img src="HAIRER.png" alt="Haier"></div>
+        <div class="partner-card"><img src="SAMSUNG.png" alt="Samsung"></div>
+        <div class="partner-card"><img src="GODREJ.png" alt="Godrej"></div>
+        <div class="partner-card"><img src="HAVELLS.png" alt="Havells"></div>
+        <div class="partner-card"><img src="JSW.png" alt="JSW"></div>
+        <div class="partner-card"><img src="NEROLAC.jpg" alt="Nerolac"></div>
+        <div class="partner-card"><img src="IMPACT.png" alt="Impact"></div>
+        <div class="partner-card"><img src="EUREKA.jpg" alt="Eureka"></div>
+        <div class="partner-card"><img src="HINDUSTAN.png" alt="Hindustan"></div>
 
-            <!-- ORIGINAL LOGOS -->
+        <!-- NEW LOGOS -->
+        <div class="partner-card"><img src="aditya.png" alt="Aditya"></div>
+        <div class="partner-card"><img src="asian.png" alt="Asian"></div>
+        <div class="partner-card"><img src="birla.png" alt="Birla"></div>
+        <div class="partner-card"><img src="boat logo.png" alt="boAt"></div>
+        <div class="partner-card"><img src="cello.png" alt="Cello"></div>
+        <div class="partner-card"><img src="jk.jpg" alt="JK"></div>
+        <div class="partner-card"><img src="lesser.png" alt="Lesser"></div>
+        <div class="partner-card"><img src="portronics.png" alt="Portronics"></div>
 
-            <div class="partner-card">
-                <img src="JJ.jpg" alt="Johnson & Johnson">
-            </div>
+      </div>
 
-            <div class="partner-card">
-                <img src="WHIRPOOL.png" alt="Whirlpool">
-            </div>
-
-            <div class="partner-card">
-                <img src="HAIRER.png" alt="Haier">
-            </div>
-
-            <div class="partner-card">
-                <img src="SAMSUNG.png" alt="Samsung">
-            </div>
-
-            <div class="partner-card">
-                <img src="GODREJ.png" alt="Godrej">
-            </div>
-
-            <div class="partner-card">
-                <img src="HAVELLS.png" alt="Havells">
-            </div>
-
-            <div class="partner-card">
-                <img src="JSW.png" alt="JSW">
-            </div>
-
-            <div class="partner-card">
-                <img src="NEROLAC.jpg" alt="Nerolac">
-            </div>
-
-            <div class="partner-card">
-                <img src="IMPACT.png" alt="Impact">
-            </div>
-
-            <div class="partner-card">
-                <img src="EUREKA.jpg" alt="Eureka">
-            </div>
-
-            <div class="partner-card">
-                <img src="HINDUSTAN.png" alt="Hindustan">
-            </div>
-
-            <!-- DUPLICATE LOGOS FOR INFINITE SLIDER -->
-
-            <div class="partner-card">
-                <img src="JJ.jpg" alt="Johnson & Johnson">
-            </div>
-
-            <div class="partner-card">
-                <img src="WHIRPOOL.png" alt="Whirlpool">
-            </div>
-
-            <div class="partner-card">
-                <img src="HAIRER.png" alt="Haier">
-            </div>
-
-            <div class="partner-card">
-                <img src="SAMSUNG.png" alt="Samsung">
-            </div>
-
-            <div class="partner-card">
-                <img src="GODREJ.png" alt="Godrej">
-            </div>
-
-            <div class="partner-card">
-                <img src="HAVELLS.png" alt="Havells">
-            </div>
-
-            <div class="partner-card">
-                <img src="JSW.png" alt="JSW">
-            </div>
-
-            <div class="partner-card">
-                <img src="NEROLAC.jpg" alt="Nerolac">
-            </div>
-
-            <div class="partner-card">
-                <img src="IMPACT.png" alt="Impact">
-            </div>
-
-            <div class="partner-card">
-                <img src="EUREKA.jpg" alt="Eureka">
-            </div>
-
-            <div class="partner-card">
-                <img src="HINDUSTAN.png" alt="Hindustan">
-            </div>
-
-        </div>
+      <!-- SECOND GROUP: AUTOMATIC EXACT DUPLICATE -->
+      <div class="partners-group" aria-hidden="true"></div>
 
     </div>
+
+  </div>
 
 </section>
+
+<script>
+(function () {
+  const track = document.querySelector(".partners-track");
+  if (!track) return;
+
+  const groups = track.querySelectorAll(".partners-group");
+  if (groups.length !== 2) return;
+
+  groups[1].innerHTML = groups[0].innerHTML;
+})();
+</script>
 
 
 
